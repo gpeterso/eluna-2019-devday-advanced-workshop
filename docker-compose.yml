@@ -10,7 +10,7 @@ services:
       - quay.io/nyulibraries/eluna-2019-devday-advanced-workshop:latest
     image: primo-explore-eluna-workshop
     environment:
-      PROXY_SERVER: http://bobcatdev.library.nyu.edu:80
+      PROXY_SERVER: ${PROXY_SERVER-http://bobcatdev.library.nyu.edu:80}
       VIEW: ${VIEW-NYU}
     ports:
     - 8003:8003
@@ -21,7 +21,7 @@ services:
   create-package:
     image: primo-explore-eluna-workshop
     environment:
-      PROXY_SERVER: http://bobcatdev.library.nyu.edu:80
+      PROXY_SERVER: ${PROXY_SERVER-http://bobcatdev.library.nyu.edu:80}
       VIEW: ${VIEW-NYU}
     ports:
     - 8003:8003
